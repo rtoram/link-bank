@@ -1,0 +1,50 @@
+# link-bank
+Link Bank - Uma aplicação para organizar links, ideias e eventos
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Links</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banco de Links</h1>
+
+        <!-- Banco de Links -->
+        <section id="links-section">
+            <h2>Links</h2>
+            <input type="text" id="link-input" placeholder="Cole o link aqui">
+            <input type="text" id="tag-input" placeholder="Adicione uma tag">
+            <button onclick="addLink()">Adicionar</button>
+            <ul id="link-list"></ul>
+        </section>
+
+        <!-- Prompt de Ideias -->
+        <section id="ideas-section">
+            <h2>Ideias</h2>
+            <textarea id="idea-input" placeholder="Digite ou cole sua ideia"></textarea>
+            <button onclick="saveIdea()">Salvar Ideia</button>
+            <ul id="idea-list"></ul>
+        </section>
+
+        <!-- Calendário -->
+        <section id="calendar-section">
+            <h2>Calendário</h2>
+            <input type="date" id="event-date">
+            <input type="text" id="event-input" placeholder="Descreva o evento">
+            <button onclick="addEvent()">Adicionar Evento</button>
+            <ul id="event-list"></ul>
+        </section>
+
+        <!-- Botões de Exportação/Importação -->
+        <section id="controls">
+            <button onclick="exportData()">Exportar Dados</button>
+            <input type="file" id="import-input" accept=".json" onchange="importData(event)">
+            <button onclick="printData()">Imprimir</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
